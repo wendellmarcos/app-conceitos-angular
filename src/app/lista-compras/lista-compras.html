@@ -1,0 +1,36 @@
+<div class="container">
+  <h1>Lista de Compras</h1>
+  <form #frm="ngForm" id="item" class="add-item-form" (ngSubmit)="adicionarItem()">
+
+    <input type="text" id="item"  [(ngModel)]="item" name="item" placeholder="Digite o nome">
+    <button class="btn btn-outline-primary"  type="submit">Adicionar</button>
+
+    <table class="lista-compras min-w-full border border-gray-200 rounded-lg shadow-sm " >
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">#</th>
+          <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Item</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-red">
+            <td class="px-6 py-4 text-sm text-gray-800">1</td>
+            <td class="px-6 py-4 text-sm text-gray-800">Arroz</td>
+            <td class="px-6 py-4 text-sm text-gray-800"><label><input type="checkbox" title="Marcar Arroz como comprado" aria-label="Marcar Arroz como comprado"/></label></td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Maca</td>
+            <td>
+              <label>
+                <input type="checkbox" title="Marcar Maca como comprado" aria-label="Marcar Maca como comprado"/>
+              </label>
+            </td>
+          </tr>
+        </tbody>
+
+    </table>
+
+  </form>
+</div>
